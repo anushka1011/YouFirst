@@ -5,5 +5,5 @@ The user enters the source and destination, the application extracts different p
 2) Detecting the safety score of current position:
 The application takes the current position of the user by using the Mapbox geolocation API. For the returned longitude and latitude, all the streets and places lying within the radius of 500m are extracted using the Mapbox Geocoding API. The safety scores of all these places are predicted using the machine learning model on taking the average of all the safety scores of the region. If the safety score is below a certain threshold an emergency SOS is activated and the user is alerted. We also depict the safety of the region by marking it green (safe) / red (unsafe).
 
-3) Feedback form:
+Feedback form:
 We used feedback form to get few details like lighting that are not originally extracted through public datasets. User is asked to enter a rating and remark, sentiment analysis is done on the remark and a rating between 1-5 (1 suggesting unsafe and 5 suggesting safe) is assigned to it,an average of this score and the rating entered by user is taken, and if it's above a certain threshold (which we have taken to be 3) then the route is considered to be safe by user. This score isn't reflected in safety score, it's shown separately as the 'percentage of users who found this route safe'.
